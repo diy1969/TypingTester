@@ -1,0 +1,11 @@
+﻿body {
+}
+#currentword{
+    margin-right:10px;
+}
+.nextword{
+    margin-right:10px;
+}
+#sourceword>span{
+    display:inline-block;
+}
