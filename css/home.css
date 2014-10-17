@@ -1,11 +1,36 @@
 ﻿body {
 }
-#currentword{
-    margin-right:10px;
+
+#currentword {
+    margin-right: 10px;
+    padding: 0px 5px;
+    background-color: #11E4E4;
 }
-.nextword{
-    margin-right:10px;
+
+#lastword {
+    margin-right: 10px;
 }
-#sourceword>span{
-    display:inline-block;
+
+#nextword {
+    margin-right: 10px;
+}
+
+.correct {
+    color: white;
+}
+
+.correctword {
+    color: #11E4E4;
+}
+
+.incorrect {
+    color: red;
+}
+
+.nextword {
+    margin-right: 10px;
+}
+
+#sourceword > span {
+    display: inline-block;
 }
