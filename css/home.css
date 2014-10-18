@@ -4,7 +4,9 @@
 #currentword {
     margin-right: 10px;
     padding: 0px 5px;
-    background-color: #11E4E4;
+    background-color: #428bca;
+    border-radius:4px;
+    color:#ffffff;
 }
 
 #lastword {
@@ -16,11 +18,14 @@
 }
 
 .correct {
-    color: white;
+    color: #2ffc1d;
 }
 
 .correctword {
-    color: #11E4E4;
+    color: #428bca;
+}
+.incorrectword{
+    color:red;
 }
 
 .incorrect {
@@ -30,7 +35,9 @@
 .nextword {
     margin-right: 10px;
 }
-
+.lastword{
+    margin-right:10px;
+}
 #sourceword > span {
     display: inline-block;
 }
