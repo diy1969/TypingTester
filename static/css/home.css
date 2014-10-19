@@ -27,6 +27,9 @@
 .incorrectword{
     color:red;
 }
+.incorrectword > span{
+    color:red;
+}
 
 .incorrect {
     color: red;

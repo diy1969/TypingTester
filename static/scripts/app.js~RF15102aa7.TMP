@@ -1,36 +1,32 @@
 ﻿
 
 $(document).ready(function () {
-    inputElement = $('#inputword');
-    sourceElement = $('#sourceword');
+    var inputTextbox = $('#inputword');
+    var sourceElement = $('#sourceword');
     console.log("ready");
     var text = sourceElement.text();
     var cur = $('#currentword');
     var str = cur.text().toLowerCase();
     var tmp = '';
     var isCorrect = true;
-    var curi = 0;   //当前词的索引号
+    var curi = 0; //当前词的索引号
     var inputContent = [];
-    inputElement.keydown(function (data, fn) {
-        var k = String.fromCharCode(data.keyCode).toLowerCase();
-        inputContent.push(data.keyCode);
-        console.log(inputContent);
-        if (data.keyCode == 8) {
+    inputTextbox.keydown(function (event, fn) {
+        if (event.which == 8) {
             if (curi == 0) {
-                var items = $('.lastword');
-                var last = items.last();
-                cur.removeAttr('id');
-                last.attr('id', 'currentword');
-                str = cur.text().toLowerCase();
-                tmp = '';
-                isCorrect = true;
+                return false;
             }
             curi--;
             tmp = tmp.substring(0, tmp.lastIndexOf('<span'));
             cur.html(tmp + str.substring(curi, str.length));
-            return;
         }
-
+        return true;
+    });
+    inputTextbox.keypress(function (data, fn) {
+        var k = String.fromCharCode(data.which).toLowerCase();
+        inputContent.push(data.which);
+        console.log(inputContent);
+        
         if (data.keyCode == 32) {
             curi = 0;
             cur.removeAttr('id');
